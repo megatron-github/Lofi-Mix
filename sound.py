@@ -4,7 +4,7 @@ import json
 
 # Napster API and API key
 API = "https://api.napster.com/v2.2"
-APIKEY = "apikey=MmY3Nzg2NjYtYmE1MC00ZGQwLWEyNGItMzYzMGQ2OGMzY2Ey"
+APIKEY = "apikey=Your_Key_Here"
 
 def save_trackID(id):
     """Saving Napster's Track ID"""
@@ -70,6 +70,7 @@ def getSound_random():
         url = API + query + APIKEY
         sound = json.loads(urlopen(url).read())
 
+    # save ID characters that identify Napster's song
     save_trackID(id)
 
     # Return the publicly-accessible direct URL for the track
