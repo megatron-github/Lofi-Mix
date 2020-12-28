@@ -35,9 +35,7 @@ def makeweb():
 
 def main():
     """Main function"""
-
-    # Function called check
-    print("Here we go!")
+    
     makeweb()
 
 main()
