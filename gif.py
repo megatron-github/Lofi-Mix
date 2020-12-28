@@ -40,9 +40,8 @@ def getGif_random():
 
     # Some cool gif topics
     vocabs = ['lofi', 'chillwave', 'anime', 'ghibli', 'cowboy-bebop', 'naruto',
-              'studio-ghibli', 'synthwave', 'shakira', 'emma-watson',
-              'my-neighbor-totoro', 'kikis-delivery-service', 'anime-aesthetic',
-              'howls-moving-castle']
+              'studio-ghibli', 'synthwave','my-neighbor-totoro', 'kikis-delivery-service', 
+              'anime-aesthetic', 'howls-moving-castle']
 
     # Query for the random topics
     query = "&q=" + random.choice(vocabs)
