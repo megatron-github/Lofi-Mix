@@ -131,8 +131,8 @@ instead of next to each other */
         /* setting up the id and change the order of
         the grid area */
         grid-template-areas:
-            "gif"
-            "msg";
+                "gif"
+                "msg";
     }
 
     /* when in responsive layout, element h2
