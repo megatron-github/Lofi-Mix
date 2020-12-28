@@ -6,12 +6,6 @@ import json
 API = "http://api.giphy.com/v1/gifs/search?"
 APIKEY = "&api_key=YOUR_KEY_HERE"
 
-def getinput():
-    """Get user input to find user's desired gif topics"""
-
-    topic = input("Please tell us what gif you are looking for: ")
-    return topic
-
 def getGif__with(topic):
     """Get a gif from Giphy with a given topic"""
 
