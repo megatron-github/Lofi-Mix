@@ -6,7 +6,7 @@ import json
 API = "http://api.giphy.com/v1/gifs/search?"
 APIKEY = "&api_key=YOUR_KEY_HERE"
 
-def getGif__with(topic):
+def getGif_with(topic):
     """Get a gif from Giphy with a given topic"""
 
     # Function called check
