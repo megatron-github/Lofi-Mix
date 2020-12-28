@@ -9,12 +9,6 @@ import re
 # Wikiquote API
 API = "https://en.wikiquote.org/w/api.php?"
 
-def getinput():
-    """Get user input to find user's desired quote topics"""
-
-    topic = input("Please tell us what gif you are looking for: ")
-    return topic
-
 def cleanTexts(texts):
     """Edit the given string to make it looks like a
        normal English string"""
@@ -60,20 +54,6 @@ def cleanTexts(texts):
     # delete all leading and trailing spaces
     texts = " ".join(texts.split())
     return texts
-
-def extractQuote(quotes):
-    """Create a string that was attached by small randomly created strings.
-       The string has at least 280 and at most 560 characters"""
-
-    # create the length of the quote
-    str_length = random.randint(140, 280)
-
-    # control how readable is the quote
-    sd_length = int((random.random() * 100) % 11)
-
-    # create a string of randomly attached strings with random writer file
-    quote = randomwriter.write(quotes, sd_length, str_length)
-    return quote
 
 def copyQuote_random(quotes):
     """Randomly pick a starting point from the text file, return a
@@ -147,7 +127,7 @@ def getQuote_with(topic):
         raise NameError('The specified query of "{}" is not long enough'.format(topic))
 
     # Get a random string (quote) from the source file
-    quote = extractQuote(texts)
+    quote = copyQuote_random(texts)
     return (topic, quote)
 
 def getQuote_random():
