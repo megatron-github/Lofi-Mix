@@ -25,8 +25,7 @@ def makeweb():
     with open('gif.html','wb') as publisher:
         publisher.write(webmaker.encode())
         publisher.close()
-
-    # Function called check
+        
     print("Enjoy!")
 
     # Open the newly created html file
