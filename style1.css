@@ -1,0 +1,151 @@
+/* styling Page Title: Radio Quotes */
+.title{
+
+    /* title has 4px vertical empty spaces, and 50px horizontal empty spaces */
+    padding: 4px  50px;
+
+    /* title has arial-typed font */
+    font-family: fantasy;
+}
+
+/* a class to divide html page into 2x1 grid (WxH) */
+.container{
+
+    /* page mode: grid */
+    display: grid;
+
+    /* the minimum height of the width: ~85% of the screen */
+    min-height: 85vh;
+
+    /* setting up the number and size of the columns of grid */
+    grid-template-columns: 1fr 1fr;
+
+    /* setting up the number and size of the rows of the grid */
+    grid-template-rows: auto;
+
+    /* setting up id and order of each grid area */
+    grid-template-areas:
+        "gif msg";
+}
+
+/* styling element img of the container class */
+.container img{
+
+    /* element img is defined as a block */
+    display: block;
+
+    /* element img will be place in the grid area
+    with id==gif */
+    grid-area: gif;
+
+    /* setting up the open space on the left of element img*/
+    margin-left: auto;
+
+    /* setting up the open space on the right of element img */
+    margin-right: auto;
+
+    /* setting up the open space at the bottom of element img */
+    margin-bottom: 2vh;
+
+    /* define the maximum width that element img can have,
+    ~100% of the grid area */
+    max-width: 100vh;
+
+    /* define the minimum height that element img can have,
+    ~90% height of the grid area */
+    min-height: 90vh;
+}
+
+/* styling element h2 of the container class */
+.container h2{
+
+    /* element h2 is defined as a block */
+    display: block;
+
+    /* element h2 will be place in the grid area
+    with id==msg */
+    grid-area: msg;
+
+    /* define the maximum width that element h2 can have,
+    ~85% of the grid area */
+    max-width: 85vh;
+
+    /* giving element h2 50px of empty spaces on the left */
+    margin-left: 50px;
+
+    /* giving element h2 empty spaces that is 30% of the grid area
+    on top of element h2 */
+    margin-top: 30%;
+
+    /* element h2 has arial-typed font */
+    font-family: fantasy;
+
+    /* element h2 has font size of 27px */
+    font-size: 27px;
+
+    /* element h2 is single spaced */
+    line-height: 1;
+}
+
+/* styling element p2 of the container class */
+.container p{
+
+    /* element p is defined as a block */
+    display: block;
+
+    /* element p will be place in the grid area
+    with id==msg */
+    grid-area: msg;
+
+    /* define the maximum width that element p can have,
+    ~85% of the grid area */
+    max-width: 85vh;
+
+    /* giving element p 50px of empty spaces on the left */
+    margin-left: 50px;
+
+    /* element p has arial-typed font */
+    font-family: fantasy;
+
+    /* element p has font size of 18px */
+    font-size: 18px;
+
+    /* element h2 is 1.5 spaced */
+    line-height: 1.5;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other
+instead of next to each other */
+@media screen and (max-width: 900px){
+
+    /* changing the grid layout when the screen
+    of user's device decreased */
+    .container{
+
+        /* container class changes to 1 columns grids */
+        grid-template-columns: 1fr;
+
+        /* container class changes to 2 rows girds */
+        grid-template-rows: 1fr, 0.1fr;
+
+        /* setting up the id and change the order of
+        the grid area */
+        grid-template-areas:
+            "gif"
+            "msg";
+    }
+
+    /* when in responsive layout, element h2
+    has special top margin and max width */
+    .container h2{
+        margin-top: 3vh;
+        max-width: 98vh;
+    }
+
+    /* when in responsive layout, element p
+    has special max-width */
+    .container p{
+        max-width: 98vh;
+        margin-bottom: 2vh;
+    }
+}
